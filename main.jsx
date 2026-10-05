@@ -13,7 +13,6 @@ import {
   Quote
 } from "lucide-react";
 import "./styles.css";
-import profilePhoto from "./profile-photo.jpg";
 
 const nav = [
   ["Home", "home"],
@@ -206,10 +205,10 @@ function Hero() {
           </h1>
 
           <p>
-            I help founders, executives, and growing businesses stay
-            organized, responsive, and operationally efficient — from
-            administrative support and client communication to digital
-            systems, websites, CRM, and marketing operations.
+            I help founders, executives, and growing businesses stay organized,
+            responsive, and operationally efficient — from administrative
+            support and client communication to digital systems, websites, CRM,
+            and marketing operations.
           </p>
 
           <div className="hero-buttons">
@@ -242,10 +241,9 @@ function Hero() {
             <span>2026</span>
           </div>
 
-          {/* REAL PROFILE PHOTO */}
-          <div className="photo-placeholder real-photo">
+          <div className="photo-placeholder">
             <img
-              src={profilePhoto}
+              src="/profile-photo.jpg"
               alt="Arwanda Nur Fatta Amalisa"
             />
           </div>
@@ -256,7 +254,6 @@ function Hero() {
 
           <div className="profile-bottom">
             <strong>Arwanda Nur Fatta Amalisa</strong>
-
             <small>
               Virtual Assistant & Business Support Professional
             </small>
@@ -356,7 +353,6 @@ function Portfolio() {
         </div>
 
         <div className="work-list">
-
           {work.map(([n, title, role, meta]) => (
             <div className="work-row" key={title}>
 
@@ -374,14 +370,13 @@ function Portfolio() {
               </div>
 
               <a href="#contact">
-                View Case Study
-                <ArrowRight size={14} />
+                View Case Study <ArrowRight size={14} />
               </a>
 
             </div>
           ))}
-
         </div>
+
       </div>
     </section>
   );
@@ -457,7 +452,6 @@ function EmailMarketing() {
           </div>
 
           <div className="process-grid">
-
             {steps.map((x, i) => (
               <div
                 className={i === 7 ? "ready" : ""}
@@ -468,7 +462,6 @@ function EmailMarketing() {
                 <b>{x}</b>
               </div>
             ))}
-
           </div>
 
           <div className="eyebrow platforms-label">
@@ -521,6 +514,7 @@ function Testimonials() {
           "BUSINESS SUPPORT",
           "CLIENT COMMUNICATION"
         ].map((x) => (
+
           <div className="quote-card" key={x}>
 
             <Quote size={19} />
@@ -536,6 +530,7 @@ function Testimonials() {
             </div>
 
           </div>
+
         ))}
 
       </div>
@@ -565,6 +560,7 @@ function Experience() {
 
             {experience.map(
               ([company, loc, role, date, current]) => (
+
                 <div
                   className="experience-row"
                   key={company}
@@ -647,8 +643,8 @@ function About() {
             <p>
               My experience spans executive assistance, customer service,
               digital operations, websites, CRM, automation, and marketing
-              support. I adapt quickly, document clearly, and stay
-              dependable when priorities shift.
+              support. I adapt quickly, document clearly, and stay dependable
+              when priorities shift.
             </p>
 
             <div className="education">
@@ -668,6 +664,7 @@ function About() {
               </small>
 
             </div>
+
           </div>
         </div>
       </div>
@@ -778,8 +775,8 @@ function Recommendation() {
           </h2>
 
           <p>
-            A professional recommendation letter from an Australian
-            client is available for relevant opportunities.
+            A professional recommendation letter from an Australian client
+            is available for relevant opportunities.
           </p>
 
         </div>
@@ -838,7 +835,6 @@ function Contact() {
               arwandanva.amalisa@gmail.com
 
               <button
-                type="button"
                 onClick={(e) => {
                   e.preventDefault();
                   copy("arwandanva.amalisa@gmail.com");
@@ -853,7 +849,6 @@ function Contact() {
               +62 857 3864 5185
 
               <button
-                type="button"
                 onClick={(e) => {
                   e.preventDefault();
                   copy("+62 857 3864 5185");
@@ -872,7 +867,6 @@ function Contact() {
               linkedin.com/in/arwanda-nur-fatta-amalisa
 
               <button
-                type="button"
                 onClick={(e) => {
                   e.preventDefault();
                   copy(
@@ -893,7 +887,6 @@ function Contact() {
               workwitharwanda.my.id
 
               <button
-                type="button"
                 onClick={(e) => {
                   e.preventDefault();
                   copy("https://workwitharwanda.my.id/");
@@ -972,9 +965,10 @@ ${f.get("message") || ""}`
               placeholder="Share a little about the support you need..."
               required
             ></textarea>
+
           </label>
 
-          <button className="submit" type="submit">
+          <button className="submit">
             Start a Conversation
             <ArrowRight size={14} />
           </button>
@@ -984,9 +978,11 @@ ${f.get("message") || ""}`
           </small>
 
         </form>
+
       </div>
 
       <footer>
+
         <span>
           © 2026 Arwanda Nur Fatta Amalisa. All rights reserved.
         </span>
@@ -994,6 +990,7 @@ ${f.get("message") || ""}`
         <a href="#home">
           Back to top ↑
         </a>
+
       </footer>
 
     </section>
